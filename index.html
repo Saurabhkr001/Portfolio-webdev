@@ -1,174 +1,412 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Saurabh kumar: Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
-        }
-        body {
-            background-color: #5f0799;
-            color: #ffffff;
-            text-align: center;
-        }
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px;
-            background-color: #1a1a1a;
-        }
-        nav h1 {
-            color: #2cd007;
-        }
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 20px;
-        }
-        nav ul li a {
-            text-decoration: none;
-            color: #ffcc00;
-            font-weight: 600;
-            transition: 0.3s;
-        }
-        nav ul li a:hover {
-            color: #ff6600;
-        }
-        #hero {
-            padding: 100px 20px;
-            background: linear-gradient(135deg, #ffcc00, #ff6600);
-            color: #121212;
-            font-size: 1.8rem;
-            font-weight: bold;
-        }
-        #hero img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            margin-top: 20px;
-            border: 5px solid #ffcc00;
-        }
-        button {
-            padding: 12px 25px;
-            background-color: #ffcc00;
-            border: none;
-            cursor: pointer;
-            font-size: 20px;
-            font-weight: bold;
-            margin-top: 15px;
-            border-radius: 8px;
-            transition: 0.3s;
-        }
-        button:hover {
-            background-color: #ff9900;
-        }
-        section {
-            padding: 60px 20px;
-        }
-        #about, #projects, #skills, #contact {
-            background-color: #1e1e1e;
-            padding: 60px 20px;
-            border-radius: 10px;
-            margin: 20px;
-        }
-        .project {
-            background-color: #333;
-            padding: 20px;
-            margin: 15px 0;
-            border-radius: 10px;
-            box-shadow: 0px 4px 10px rgba(255, 204, 0, 0.3);
-        }
-        ul {
-            list-style: none;
-            padding: 0;
-        }
-        ul li {
-            display: inline-block;
-            background-color: #562abb;
-            color: #121212;
-            padding: 10px 20px;
-            margin: 5px;
-            border-radius: 5px;
-            font-weight: bold;
-        }
-        #contact a {
-            color: #ff6600;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        #contact a:hover {
-            color: #ff3300;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Saurabh Kumar — Software Developer at Chetu Inc. Ruby on Rails, Python, Java. Portfolio & projects." />
+  <title>Saurabh Kumar — Software Developer</title>
+
+  <!-- Fonts: Syne (display) + DM Sans (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <header>
-        <nav>
-            <h1>Saurabh Kumar</h1>
-            <ul>
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#contact">Contact</a></li>
+
+  <!-- Mesh background -->
+  <div class="mesh"><span></span><span></span><span></span></div>
+
+  <!-- ── NAV ─────────────────────────────────────────────── -->
+  <header>
+    <nav>
+      <a class="nav-logo" href="#hero">SK<span>.</span></a>
+      <ul id="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ── HERO ────────────────────────────────────────────── -->
+  <section id="hero">
+    <div class="hero-left reveal">
+      <div class="hero-tag">
+        <span class="dot"></span>
+        Available for opportunities
+      </div>
+      <h1>Saurabh<br><span class="name-accent">Kumar</span></h1>
+      <p class="typing-line"><span class="typed"></span><span class="cursor-blink"></span></p>
+      <div class="hero-location">
+        <i class="fas fa-map-marker-alt"></i>
+        Noida, India &nbsp;·&nbsp;
+        <i class="fas fa-building"></i>
+        &nbsp;Chetu Inc.
+      </div>
+      <p class="hero-desc">
+        A <strong>Software Developer</strong> with hands-on experience building full-stack web applications using
+        <strong>Ruby on Rails 8</strong>, REST APIs, and relational databases.
+        Passionate about clean architecture, third-party integrations, and shipping real products.
+      </p>
+      <div class="hero-btns">
+        <a href="#projects" class="btn-primary"><i class="fas fa-code"></i> View Projects</a>
+        <a href="#contact" class="btn-ghost"><i class="fas fa-paper-plane"></i> Contact Me</a>
+        <a href="resume.pdf" target="_blank" class="btn-ghost"><i class="fas fa-file-alt"></i> Resume</a>
+      </div>
+      <div class="hero-socials">
+        <a href="https://github.com/Saurabhkr001" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/saurabh-kumar-401b42212/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="mailto:saurabhskp1000@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+    <div class="hero-right reveal" style="transition-delay:0.15s">
+      <div class="profile-card">
+        <div class="profile-img-wrap">
+          <!-- Replace with your actual image: <img src="images/profile.jpg" alt="Saurabh Kumar"> -->
+          <span class="initials-fallback">SK</span>
+        </div>
+        <div class="badge-float top-right">
+          <i class="fas fa-gem"></i> Pull Shark 🦈
+        </div>
+        <div class="badge-float bot-left">
+          <i class="fab fa-github"></i> 7 Repos
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── ABOUT ────────────────────────────────────────────── -->
+  <section id="about">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-label">Background</p>
+        <h2 class="section-title">About <span>Me</span></h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <p>
+            I'm a <strong>Computer Science graduate from NIMS University, Jaipur</strong>, currently working as a Software Developer at <strong>Chetu Inc., Noida</strong>. I build full-stack web applications with a focus on clean, maintainable code and practical problem-solving.
+          </p>
+          <p>
+            My primary stack is <strong>Ruby on Rails 8</strong> — including real-world API integrations (Twilio, OpenWeather), background job processing with Sidekiq, Docker-based deployments, and database design with ActiveRecord.
+          </p>
+          <div class="highlight-box">
+            "Dream Big, start small, but most of all, START."
+          </div>
+          <p>
+            I enjoy bridging theory and practice — from DSA notebooks to production Rails apps. I'm actively looking to grow into backend engineering and open-source contributions.
+          </p>
+          <div class="currently-at">
+            <div class="co-icon"><i class="fas fa-building"></i></div>
+            <div class="co-info">
+              <div class="co-label">Currently working at</div>
+              <div class="co-name">Chetu Inc.</div>
+              <div class="co-role">Software Developer · Noida, India</div>
+            </div>
+          </div>
+        </div>
+        <div class="skills-panel reveal" style="transition-delay:0.1s">
+          <h3>Technical Skills</h3>
+          <div class="skill-group">
+            <div class="skill-group-label">Backend & Frameworks</div>
+            <div class="skill-chips">
+              <span class="chip"><span class="chip-icon">💎</span> Ruby on Rails 8</span>
+              <span class="chip"><span class="chip-icon">🐍</span> Python</span>
+              <span class="chip"><span class="chip-icon">☕</span> Java</span>
+              <span class="chip"><span class="chip-icon">🔵</span> C</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <div class="skill-group-label">Databases & APIs</div>
+            <div class="skill-chips">
+              <span class="chip">SQL / ActiveRecord</span>
+              <span class="chip">REST APIs</span>
+              <span class="chip">OpenWeather API</span>
+              <span class="chip">Twilio API</span>
+              <span class="chip">JSON</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <div class="skill-group-label">Tools & Infrastructure</div>
+            <div class="skill-chips">
+              <span class="chip"><span class="chip-icon">🐳</span> Docker</span>
+              <span class="chip">Sidekiq / Redis</span>
+              <span class="chip">Git / GitHub</span>
+              <span class="chip">RSpec</span>
+              <span class="chip">Kamal</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <div class="skill-group-label">Frontend & Others</div>
+            <div class="skill-chips">
+              <span class="chip">HTML / CSS / JS</span>
+              <span class="chip">ERB Views</span>
+              <span class="chip">Data Structures</span>
+              <span class="chip">Jupyter Notebook</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── PROJECTS ─────────────────────────────────────────── -->
+  <section id="projects">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-label">What I've Built</p>
+        <h2 class="section-title">Featured <span>Projects</span></h2>
+      </div>
+
+      <div class="projects-filter reveal">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="rails">Ruby on Rails</button>
+        <button class="filter-btn" data-filter="python">Python</button>
+        <button class="filter-btn" data-filter="java">Java</button>
+      </div>
+
+      <div class="projects-grid">
+
+        <!-- FEATURED -->
+        <div class="project-card featured reveal" data-cat="rails">
+          <div class="project-header">
+            <div class="project-icon"><i class="fas fa-book-open"></i></div>
+            <span class="project-featured-tag">⭐ Featured</span>
+          </div>
+          <h3>Bookify — Rails Bookstore App</h3>
+          <p>A full-stack bookstore application built with Ruby on Rails 8. Features full CRUD for books, background job processing with Sidekiq/Redis, Active Storage for file uploads, Docker containerisation, and a complete test suite with RSpec and Rails system tests. Deployed via Kamal.</p>
+          <div class="tech-tags">
+            <span class="tech-tag rails">Ruby on Rails 8</span>
+            <span class="tech-tag ruby">Ruby</span>
+            <span class="tech-tag sql">SQL</span>
+            <span class="tech-tag docker">Docker</span>
+            <span class="tech-tag api">Sidekiq</span>
+          </div>
+          <a href="https://github.com/Saurabhkr001/Bookify-Rails" target="_blank" class="project-link">
+            <i class="fab fa-github"></i> View on GitHub <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+
+        <!-- WEATHER API -->
+        <div class="project-card reveal" data-cat="rails" style="transition-delay:0.05s">
+          <div class="project-header">
+            <div class="project-icon"><i class="fas fa-cloud-sun"></i></div>
+          </div>
+          <h3>Weather API Integration</h3>
+          <p>Single-page Rails 8 app that integrates the OpenWeather REST API to fetch and display real-time weather by city. Secure API key handling via environment variables, JSON parsing, ERB views.</p>
+          <div class="tech-tags">
+            <span class="tech-tag rails">Ruby on Rails 8</span>
+            <span class="tech-tag api">OpenWeather API</span>
+            <span class="tech-tag docker">Docker</span>
+          </div>
+          <a href="https://github.com/Saurabhkr001/Weather-API-Integration" target="_blank" class="project-link">
+            <i class="fab fa-github"></i> View on GitHub <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+
+        <!-- TWILIO -->
+        <div class="project-card reveal" data-cat="rails" style="transition-delay:0.1s">
+          <div class="project-header">
+            <div class="project-icon"><i class="fas fa-sms"></i></div>
+          </div>
+          <h3>Twilio SMS Integration</h3>
+          <p>Integration of the Twilio API into a Rails 8 application for SMS notifications. Demonstrates third-party API lifecycle management, environment-variable-based credential security, and clean controller design.</p>
+          <div class="tech-tags">
+            <span class="tech-tag rails">Ruby on Rails 8</span>
+            <span class="tech-tag api">Twilio API</span>
+            <span class="tech-tag ruby">Ruby</span>
+          </div>
+          <a href="https://github.com/Saurabhkr001/Twilio-in-rails" target="_blank" class="project-link">
+            <i class="fab fa-github"></i> View on GitHub <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+
+        <!-- ARTIST STUDIO -->
+        <div class="project-card reveal" data-cat="rails" style="transition-delay:0.15s">
+          <div class="project-header">
+            <div class="project-icon"><i class="fas fa-palette"></i></div>
+          </div>
+          <h3>Artist Studio</h3>
+          <p>A premium digital art studio platform combining a private artwork management dashboard with a public-facing gallery portfolio. Inspired by modern museum experiences — minimalist, content-first, and fully responsive. Built with Hotwire (Turbo + Stimulus) for reactive UI without heavy JavaScript.</p>
+          <div class="tech-tags">
+            <span class="tech-tag rails">Ruby on Rails 8</span>
+            <span class="tech-tag api">Hotwire / Turbo</span>
+            <span class="tech-tag ruby">Stimulus</span>
+            <span class="tech-tag docker">Tailwind CSS v4</span>
+            <span class="tech-tag sql">SQLite</span>
+            <span class="tech-tag docker">Kamal</span>
+          </div>
+          <a href="https://github.com/Saurabhkr001/Artist-Studio" target="_blank" class="project-link">
+            <i class="fab fa-github"></i> View on GitHub <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+
+        <!-- TIC-TAC-TOE -->
+        <div class="project-card reveal" data-cat="python" style="transition-delay:0.2s">
+          <div class="project-header">
+            <div class="project-icon"><i class="fas fa-gamepad"></i></div>
+          </div>
+          <h3>Tic-Tac-Toe (Pygame)</h3>
+          <p>A 2-player graphical Tic-Tac-Toe game built with Python and the Pygame library. Demonstrates event-driven programming, game loop architecture, and modular function design.</p>
+          <div class="tech-tags">
+            <span class="tech-tag python">Python</span>
+            <span class="tech-tag api">Pygame</span>
+          </div>
+          <a href="https://github.com/Saurabhkr001" target="_blank" class="project-link">
+            <i class="fab fa-github"></i> View on GitHub <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+
+        <!-- FOREX -->
+        <div class="project-card reveal" data-cat="java" style="transition-delay:0.25s">
+          <div class="project-header">
+            <div class="project-icon"><i class="fas fa-exchange-alt"></i></div>
+          </div>
+          <h3>Forex Currency Converter</h3>
+          <p>A Java-based currency converter using Java frameworks. Accepts user input in any supported currency and converts to the desired output with real-time rate logic.</p>
+          <div class="tech-tags">
+            <span class="tech-tag java">Java</span>
+          </div>
+          <a href="https://github.com/Saurabhkr001" target="_blank" class="project-link">
+            <i class="fab fa-github"></i> View on GitHub <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── EXPERIENCE TIMELINE ───────────────────────────────── -->
+  <section id="experience">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-label">Career</p>
+        <h2 class="section-title">Work <span>Experience</span></h2>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-meta">
+              <span class="timeline-role">Software Developer</span>
+              <span class="timeline-date">2026 — Present</span>
+            </div>
+            <div class="timeline-company"><strong>Chetu Inc.</strong> · Noida, India</div>
+            <ul class="timeline-points">
+              <li>Building and maintaining full-stack web applications using <strong>Ruby on Rails 8</strong></li>
+              <li>Integrating third-party APIs including Twilio (SMS) and OpenWeather (weather data)</li>
+              <li>Containerising applications with <strong>Docker</strong> and managing deployments via Kamal</li>
+              <li>Implementing background job processing with <strong>Sidekiq & Redis</strong></li>
+              <li>Writing unit and integration tests with RSpec and Rails system tests</li>
             </ul>
-        </nav>
-    </header>
-    
-    <section id="hero">
-        <h2>Hello! This is Saurabh Kumar.</h2>
-        <p><b><i>"Dream Big, start small, but most of all, START."</i> </b> </p>
-        <img src="c:\Users\saura\OneDrive\Desktop\New folder (2)\profile.jpg" alt="Saurabh Kumar">
-        <p>Aspiring Computer Science Engineering Student at NIMS University, Jaipur.</p>
-        
-    </section>
-
-    <section id="about">
-        <h2>About Me</h2>
-        <p>Hi, I'm Saurabh Kumar, a Computer Science graduate with strong skills in Python, SQL, and Data Structures.
-            I enjoy solving coding challeneges and have build projects like a 'Library Management System' to apply my knowledge in real-world scenerios.
-            I'm passionate about my career and want to grow as a Software developer.
-        </p>
-    </section>
-
-    <section id="projects">
-        <h2>Projects</h2>
-        <div class="project">
-            
-            <h3>Tic-Tac-toe</h3>
-            <p>An intresting 2-player game made in python using multiple functions and libraries like pygame.</p>
+          </div>
         </div>
-        <div class="project">
-            <h3>Forex convertor</h3>
-            <p>A type of currency convertor where I used Java frameworks for more and better functionalities.
-                It takes input from the user in a specific currency and converts it into the desired currency and returns the output.
-            </p>
+        <div class="timeline-item reveal" style="transition-delay:0.1s">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-meta">
+              <span class="timeline-role">B.Tech — Computer Science Engineering</span>
+              <span class="timeline-date">2022 — 2026</span>
+            </div>
+            <div class="timeline-company"><strong>NIMS University</strong> · Jaipur, Rajasthan</div>
+            <ul class="timeline-points">
+              <li>Studied Data Structures, Algorithms, Databases, and Software Engineering</li>
+              <li>Built projects in Ruby, Python, Java and SQL during academic coursework</li>
+            </ul>
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <section id="skills">
-        <h2>Skills</h2>
-        <ul>
-            <li>Python</li>
-            <li>Java</li>
-            <li>C</li>
-            <li>SQL & Databases</li>
-            <li>Front-end Development</li>
-            
-        </ul>
-    </section>
+  <!-- ── CONTACT ───────────────────────────────────────────── -->
+  <section id="contact">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-label">Get In Touch</p>
+        <h2 class="section-title">Let's <span>Connect</span></h2>
+      </div>
+      <div class="contact-wrap">
+        <div class="contact-left reveal">
+          <h3>Open to new opportunities</h3>
+          <p>Whether it's a full-time role, freelance project, or just a conversation about tech — my inbox is open. I'll get back within 24 hours.</p>
+          <div class="contact-links">
+            <a href="mailto:saurabhskp1000@gmail.com" class="contact-link">
+              <div class="link-icon"><i class="fas fa-envelope"></i></div>
+              <div class="link-meta">
+                <div class="link-label">Email</div>
+                <div class="link-val">saurabhskp1000@gmail.com</div>
+              </div>
+            </a>
+            <a href="https://www.linkedin.com/in/saurabh-kumar-401b42212/" target="_blank" class="contact-link">
+              <div class="link-icon"><i class="fab fa-linkedin-in"></i></div>
+              <div class="link-meta">
+                <div class="link-label">LinkedIn</div>
+                <div class="link-val">saurabh-kumar-401b42212</div>
+              </div>
+            </a>
+            <a href="https://github.com/Saurabhkr001" target="_blank" class="contact-link">
+              <div class="link-icon"><i class="fab fa-github"></i></div>
+              <div class="link-meta">
+                <div class="link-label">GitHub</div>
+                <div class="link-val">Saurabhkr001 · 7 repositories</div>
+              </div>
+            </a>
+            <a href="https://www.instagram.com/saurabh_kr001" target="_blank" class="contact-link">
+              <div class="link-icon"><i class="fab fa-instagram"></i></div>
+              <div class="link-meta">
+                <div class="link-label">Instagram</div>
+                <div class="link-val">@saurabh_kr001</div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="reveal" style="transition-delay:0.1s">
+          <form id="contact-form" class="contact-form">
+            <div class="form-row">
+              <div class="form-field">
+                <label for="name">Name</label>
+                <input id="name" type="text" placeholder="Your name" required />
+              </div>
+              <div class="form-field">
+                <label for="email">Email</label>
+                <input id="email" type="email" placeholder="your@email.com" required />
+              </div>
+            </div>
+            <div class="form-field">
+              <label for="subject">Subject</label>
+              <input id="subject" type="text" placeholder="What's this about?" />
+            </div>
+            <div class="form-field">
+              <label for="message">Message</label>
+              <textarea id="message" rows="5" placeholder="Tell me about the opportunity or project..." required></textarea>
+            </div>
+            <button type="submit" class="btn-primary" style="border:none;cursor:pointer;font-family:var(--font-body);">
+              <i class="fas fa-paper-plane"></i> Send Message
+            </button>
+            <p id="form-msg"></p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Email: saurabhskp1000@gmail.com</p>
-        <p>Linkedin: <a href="https://www.linkedin.com/in/saurabh-kumar-401b42212/" target="_blank">Saurabh kumar</a></p>
-        <p>Instagram: <a href="https://www.instagram.com/saurabh_kr001" target="_blank">@saurabh_kr001</a></p>
-    </section>
+  <!-- ── FOOTER ────────────────────────────────────────────── -->
+  <footer>
+    <p>Designed & built by <strong>Saurabh Kumar</strong> · &copy; 2025 · Noida, India</p>
+    <p style="margin-top:6px;font-size:0.82rem">
+      <a href="https://github.com/Saurabhkr001" target="_blank" style="color:var(--accent);text-decoration:none;">GitHub</a>
+      &nbsp;·&nbsp;
+      <a href="https://www.linkedin.com/in/saurabh-kumar-401b42212/" target="_blank" style="color:var(--accent);text-decoration:none;">LinkedIn</a>
+    </p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
