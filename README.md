@@ -36,7 +36,7 @@ This project showcases my skills, featured projects, and professional experience
 
 ## 💻 How to Run Locally
 
-1. Clone the repository: `git clone https://github.com/Saurabhkr001/<your-repo-name>.git`
+1. Clone the repository: `git clone https://github.com/Saurabhkr001/Portfolio-webdev`
 2. Navigate to the project directory.
 3. Open `index.html` in your favorite web browser. No build steps or local server required!
 
